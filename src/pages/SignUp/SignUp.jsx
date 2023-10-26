@@ -3,7 +3,7 @@ import "./Signup.css";
 import { Link } from "react-router-dom";
 import ShowEye from "../../components/ShowEye/ShowEye";
 import { useForm } from "react-hook-form";
-import Spinner from "../../utils/spinner";
+import Spinner from "../../utils/Spinner";
 import useAuth from "../../hooks/UseAuth";
 const SignUp = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
