@@ -1,9 +1,9 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./SignIn.css";
 import ShowEye from "../../components/ShowEye/ShowEye";
 import { useForm } from "react-hook-form";
-import Spinner from "../../utils/spinner";
+import Spinner from "../../utils/Spinner";
 import useAuth from "../../hooks/UseAuth";
 
 const SignIn = () => {
@@ -15,12 +15,11 @@ const SignIn = () => {
     formState: { errors },
   } = useForm();
 
-  const { handleSignInUser, authenticating } = useAuth()
+  const { handleSignInUser, authenticating } = useAuth();
 
   const btnText = authenticating ? <Spinner /> : "Login to your account";
 
   const onSubmit = (data) => {
-    
     handleSignInUser(data);
   };
   return (
